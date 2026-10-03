@@ -1,0 +1,193 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #F6F7FB;
+  transition: all 0.4s;
+}
+
+.dark {
+  background: #0B1220;
+  color: #F9FAFB;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: cyan;
+  height: 90px;
+  z-index: 1000;
+}
+
+.middle ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.middle ul .tab {
+  margin: 0 20px;
+  list-style: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.middle ul .tab a {
+  text-decoration: none;
+  color: #2563EB;
+}
+
+.dark .middle ul .tab a {
+  color: #60A5FA;
+}
+
+.right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+#toggleBtn {
+  display: none;
+}
+
+.toggle {
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  border: 2px solid #4C4D51;
+  background: #AAAAAE;
+  border-radius: 20px;
+  position: relative;
+  transition: background 0.4s;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.toggle-span {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: #fff;
+  display: inline-block;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  animation: toggleOff 0.4s linear forwards;
+}
+
+
+#toggleBtn:checked + .toggle {
+  background: #272835;
+}
+
+#toggleBtn:checked + .toggle .toggle-span {
+  animation: toggleOn 0.4s linear forwards;
+}
+
+@keyframes toggleOn {
+  0% {
+    transform: translateX(0);
+  }
+  
+  100% {
+    transform: translateX(30px);
+  }
+}
+
+@keyframes toggleOff {
+  0% {
+    transform: translateX(30px);
+  }
+  
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#addApplication {
+  font-size: 18px;
+  padding: 10px 20px;
+  width: 90px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 2px 2px 4px #515256;
+  background: #DDE1DB;
+  cursor: pointer;
+  color: #2563EB;
+}
+
+.dark #addApplication {
+  color: #60A5FA;
+}
+
+#addApplication:hover {
+  background: #C8CCCC;
+}
+
+#addApplication:active {
+  background: #AAAEA8;
+  transform: translateY(-5px);
+}
+
+#menu {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .right {
+    display: none;
+    
+  }
+  
+  .middle ul{
+    display: none;
+  }
+  
+  .middle .middle-display {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 80px;
+    background: cyan;
+    height: 100px;
+    padding: 10px;
+  }
+  
+  .right-display {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 170px;
+    background: cyan;
+    padding: 10px;
+  }
+  
+  .toggle, #addApplication {
+    margin: 0 20px;
+  }
+  
+  #menu {
+    display: inline-block;
+    width: 50px;
+  }
+}

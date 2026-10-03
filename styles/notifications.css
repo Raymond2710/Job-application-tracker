@@ -1,0 +1,64 @@
+.message-container {
+  position: fixed;
+  top: 150px;
+  right: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+
+.success-message {
+  background: #54555A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  border-radius: 10px;
+  padding: 20px;
+  border-left: 5px solid #16E62E;
+}
+
+.error-message {
+  background: #54555A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  border-radius: 10px;
+  padding: 20px;
+  border-left: 5px solid #EE1111;
+}
+
+.fadeIn {
+  animation: fadeIn 1s linear;
+
+}
+
+.fadeOut {
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeIn{
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut{
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
