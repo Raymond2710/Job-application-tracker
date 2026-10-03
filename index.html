@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    job application tracker
+  </title>
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/application-form.css">
+  <link rel="stylesheet" href="styles/notifications.css">
+</head>
+
+<body>
+  
+  <header>
+    <h2 class="page-title">
+      Job Application Tracker
+    </h2>
+    <nav class="middle">
+      <ul class="links">
+        <li class="tab">
+          <a href="#statistics">
+            Statistics
+          </a>
+        </li>
+        <li class="tab">
+          <a href="#applications">
+            Applications
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="right">
+      <div class="mode">
+        <input type="checkbox" id="toggleBtn">
+        <label for="toggleBtn" class="toggle"><span class="toggle-span"></span>
+        </label>
+      </div>
+      <button id="addApplication">
+        +Add
+      </button>
+    </div>
+    <img src="images/text-align-justify.png" id="menu">
+  </header>
+  
+  <main>
+    
+    <section id="statistics" class="statistics">
+      <div class="total stat">
+        <p class="total-text">
+          Total:
+        </p>
+        <p class="total-value">
+          0
+        </p>
+      </div>
+      <div class="wishlist stat">
+        <p class="wishlist-text">
+          Wishlist:
+        </p>
+        <p class="wishlist-value">
+          0
+        </p>
+      </div>
+      <div class="applied stat">
+        <p class="applied-text">
+          Applied:
+        </p>
+        <p class="applied-value">
+          0
+        </p>
+      </div>
+      <div class="interview stat">
+        <p class="interview-text">
+          Interview:
+        </p>
+        <p class="interview-value">
+          0
+        </p>
+      </div>
+      <div class="offer stat">
+        <p class="offer-text">
+          Offer:
+        </p>
+        <p class="offer-value">
+          0
+        </p>
+      </div>
+      <div class="rejected stat">
+        <p class="rejected-text">
+          Rejected:
+        </p>
+        <p class="rejected-value">
+          0
+        </p>
+      </div>
+    </section>
+    
+    <section class="filter-sort">
+      <input type="text" id="searchBox" placeholder="Search application">
+      
+      <select id="filter">
+        <option value="all">All</option>
+        <option value="applied">
+          Applied
+        </option>
+        <option value="interview">
+          Interview
+        </option>
+        <option value="offer">
+          Offer
+        </option>
+        <option value="rejected">
+          Rejected
+        </option>
+        <option value="wishlist">
+          Wishlist
+        </option>
+      </select>
+      
+      <select id="sort">
+        <option value="newest">
+          Newest
+        </option>
+        <option value="oldest">
+          Oldest
+        </option>
+        <option value="A-Z">
+          A-Z
+        </option>
+        <option value="Z-A">
+          Z-A
+        </option>
+      </select>
+    </section>
+    
+    <section id="applications">
+      
+    </section>
+    
+  </main>
+  
+  <div class="message-container">
+    
+  </div>
+  
+  <script src="scripts/storage.js"></script>
+  <script src="scripts/utility.js"></script>
+  <script src="scripts/notifications.js"></script>
+  <script src="scripts/applications.js"></script>
+  
+  <script src="scripts/ui.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/addApplication.js"></script>
+</body>
+
+</html>
